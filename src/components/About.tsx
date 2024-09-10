@@ -1,5 +1,6 @@
 import profile from '/favicon.svg';
-import Line from '/Users/yooj_1204/Desktop/repos/wafflestudio-seminar-2024-frontend-profile-page-assignment/src/components/Line.tsx';
+
+import Line from '../components/Line.tsx';
 
 const About = () => {
   return (
