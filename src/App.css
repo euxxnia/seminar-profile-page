@@ -1,8 +1,9 @@
-html, body {
+html,
+body {
   margin: 0; /* 기본 여백 제거 */
   padding: 0; /* 기본 패딩 제거 */
   height: 100%; /* 전체 높이 설정 */
-  background-color: #FFF8F5; /* 배경색 설정 */
+  background-color: #fff8f5; /* 배경색 설정 */
 }
 
 #root {
@@ -17,37 +18,37 @@ html, body {
   filter: brightness(0.9);
 }
 
-.Contact{
+.Contact {
   position: fixed; /* 화면에 고정시키기 위해 position을 fixed로 설정 */
-    bottom: 30px; /* 화면의 아래쪽에서 30px 떨어지게 설정 */
-    left: 0; /* 화면의 왼쪽 가장자리에 맞춤 */
-    right: 0;
-    width: 160px; 
-    display: flex;            /* Flexbox를 사용하여 아이템을 가로로 배치 */
-    justify-content: space-between;  /* 아이템들 사이에 같은 간격 배치 */
-    align-items: center;      /* 세로 방향으로 아이템들을 가운데 정렬 */
-    margin: 20px auto;           /* div 자체를 화면 가로 중앙에 배치 */
+  bottom: 30px; /* 화면의 아래쪽에서 30px 떨어지게 설정 */
+  left: 0; /* 화면의 왼쪽 가장자리에 맞춤 */
+  right: 0;
+  width: 160px;
+  display: flex; /* Flexbox를 사용하여 아이템을 가로로 배치 */
+  justify-content: space-between; /* 아이템들 사이에 같은 간격 배치 */
+  align-items: center; /* 세로 방향으로 아이템들을 가운데 정렬 */
+  margin: 20px auto; /* div 자체를 화면 가로 중앙에 배치 */
 }
 
-.About{
+.About {
   margin: 140px auto;
   margin-bottom: 40px;
-  color: #4A4A4A;
+  color: #4a4a4a;
 }
 
-.profile{
+.profile {
   width: 160px;
   border-radius: 112px;
   margin: 30px auto;
   box-shadow: 0px 0px 20px 0px rgba(244, 234, 229, 0.58);
 }
 
-.major{
-  color: #D5CFCF;
+.major {
+  color: #d5cfcf;
 }
 
-.light-text{
-  color: #D5C2BF;
+.light-text {
+  color: #d5c2bf;
 }
 
 .background {
