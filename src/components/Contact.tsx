@@ -15,11 +15,7 @@ const Contact = () => {
       >
         <img src={instagramLogo} className="logo" alt="instagram logo" />
       </a>
-      <a
-        href="https://mailto:eugene@snu.ac.kr"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a href="mailto:eugene@snu.ac.kr" target="_blank" rel="noreferrer">
         <img src={mailIcon} className="logo" alt="mail icon" />
       </a>
     </div>
