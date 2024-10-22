@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
+import styles from '../App.module.css';
 import { works } from '../data/works';
 
 const WorksDetailPage: React.FC = () => {
@@ -12,17 +13,42 @@ const WorksDetailPage: React.FC = () => {
   }
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h2>{selectedWork.title}</h2>
-      <p>Date: {selectedWork.date}</p>
-      <p>Tags: {selectedWork.tags.join(', ')}</p>
-      <p>Keywords: {selectedWork.keywords.join(', ')}</p>
+    <div style={{ padding: '40px' }}>
+      {selectedWork.tags.map((tag) => (
+        <button
+          key={tag}
+          className={`${styles.tag ?? ''} ${tag.includes(tag) ? (styles.activeTag ?? '') : ''}`}
+          style={{ cursor: 'auto' }}
+        >
+          {tag}
+        </button>
+      ))}
+      <h2 className={styles.worksDetailTitle}>{selectedWork.title}</h2>
+      <div className={styles.worksDetailDivider}></div>
       <img
         src={selectedWork.image}
         alt={selectedWork.title}
-        style={{ maxWidth: '100%', height: 'auto' }}
+        style={{
+          margin: '0 auto',
+          marginTop: '40px',
+          marginBottom: '32px',
+          width: '50vw',
+          height: 'auto',
+        }}
       />
-      <p>{selectedWork.content}</p>
+      <div
+        className={styles.worksDetailInfos}
+        style={{
+          margin: '20px',
+          color: '#D5CFCF',
+          fontSize: '14px',
+          fontWeight: '500',
+        }}
+      >
+        <p>{selectedWork.date}</p>
+        <p>#{selectedWork.keywords.join(', #')}</p>
+      </div>
+      <p className={styles.worksDetailContent}>{selectedWork.content}</p>
     </div>
   );
 };
