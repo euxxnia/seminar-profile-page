@@ -20,7 +20,7 @@ const DefaultHeader = () => {
         onClick={() => {
           navigate('/works');
         }}
-        className={`${styles.navButton ?? ''} ${location.pathname === '/works' ? (styles.activeButton ?? '') : ''}`}
+        className={`${styles.navButton ?? ''} ${location.pathname.startsWith('/works') ? (styles.activeButton ?? '') : ''}`}
       >
         Works
       </button>

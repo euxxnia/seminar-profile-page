@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import DefaultHeader from './components/Header';
 import MainPage from './page/mainPage';
+import WorksDetailPage from './page/worksDetailPage';
 import WorksPage from './page/worksPage';
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
           <Route element={<MainPage />} path="/" />
           <Route element={<WorksPage />} path="/works" />
           <Route element={<BlogPage />} path="/blog" />
+          <Route path="/works/:id" element={<WorksDetailPage />} />
         </Routes>
       </div>
     </>

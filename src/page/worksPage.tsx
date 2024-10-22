@@ -2,58 +2,21 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import styles from '../App.module.css';
-
-type Work = {
-  id: number;
-  title: string;
-  tags: string[];
-  date: string;
-  keywords: string[];
-  image: string;
-  content: string;
-};
-
-const worksData = [
-  {
-    id: 1,
-    title: 'Work 1',
-    tags: ['UXUI'],
-    date: '2024-01-01',
-    keywords: ['design', 'ux'],
-    image: 'image1.jpg',
-    content: 'Work 1 content...',
-  },
-  {
-    id: 2,
-    title: 'Work 2',
-    tags: ['Graphic Design'],
-    date: '2024-02-15',
-    keywords: ['graphics', 'art'],
-    image: 'image2.jpg',
-    content: 'Work 2 content...',
-  },
-  {
-    id: 3,
-    title: 'Work 3',
-    tags: ['UXUI', 'Web Development'],
-    date: '2024-03-10',
-    keywords: ['web', 'development'],
-    image: 'image3.jpg',
-    content: 'Work 3 content...',
-  },
-];
+import { type Work, works } from '../data/works';
 
 type WorksListProps = {
   works: Work[];
 };
 
-const WorksList: React.FC<WorksListProps> = ({ works }) => {
+const WorksList: React.FC<WorksListProps> = ({ works: worksFromProps }) => {
+  // props로 받은 works의 이름 변경
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const navigate = useNavigate();
 
   // works 배열에서 고유한 태그 목록 추출
-  const uniqueTags = Array.from(new Set(works.flatMap((work) => work.tags)));
-
+  const uniqueTags = Array.from(
+    new Set(worksFromProps.flatMap((work) => work.tags)),
+  );
   // 태그 선택 및 선택 해제 함수
   const toggleTag = (tag: string) => {
     setSelectedTags((prevTags) =>
@@ -103,11 +66,17 @@ const WorksList: React.FC<WorksListProps> = ({ works }) => {
             onClick={() => {
               navigate(`/works/${work.id}`);
             }}
+            style={{ backgroundImage: `url(${work.image})` }}
           >
-            <h3>{work.title}</h3>
-            <p>Date: {work.date}</p>
-            <p>Keywords: {work.keywords.join(', ')}</p>
-            <p>Tags: {work.tags.join(', ')}</p>
+            <div className={styles.itemGradient} />
+            <div className={styles.itemInner}>
+              {/* <p>{work.tags.join(', ')}</p> */}
+              <h3 className={styles.itemTitle}>{work.title}</h3>
+              <div className={styles.itemInfos}>
+                <p>{work.keywords.join(', ')}</p>
+                <p>{work.date}</p>
+              </div>
+            </div>
           </div>
         ))}
       </div>
@@ -116,7 +85,7 @@ const WorksList: React.FC<WorksListProps> = ({ works }) => {
 };
 
 const WorksPage = () => {
-  return <WorksList works={worksData} />;
+  return <WorksList works={works} />;
 };
 
 export default WorksPage;
