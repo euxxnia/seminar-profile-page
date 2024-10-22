@@ -14,15 +14,17 @@ const WorksDetailPage: React.FC = () => {
 
   return (
     <div style={{ padding: '40px' }}>
-      {selectedWork.tags.map((tag) => (
-        <button
-          key={tag}
-          className={`${styles.tag ?? ''} ${tag.includes(tag) ? (styles.activeTag ?? '') : ''}`}
-          style={{ cursor: 'auto' }}
-        >
-          {tag}
-        </button>
-      ))}
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+        {selectedWork.tags.map((tag) => (
+          <button
+            key={tag}
+            className={`${styles.tag ?? ''} ${tag.includes(tag) ? (styles.activeTag ?? '') : ''}`}
+            style={{ cursor: 'auto' }}
+          >
+            {tag}
+          </button>
+        ))}
+      </div>
       <h2 className={styles.worksDetailTitle}>{selectedWork.title}</h2>
       <div className={styles.worksDetailDivider}></div>
       <img

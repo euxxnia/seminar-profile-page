@@ -92,8 +92,8 @@
   z-index: 1;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 0.4) 100% /* 그 후 블러 효과를 적용 */
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.6) 100% /* 그 후 블러 효과를 적용 */
   );
 }
 
@@ -115,7 +115,7 @@
   width: 237px;
   color: var(--mono-white, #fff);
   font-family: Pretendard;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   letter-spacing: 0.3px;
 }
@@ -127,7 +127,7 @@
   height: 16px;
   justify-content: space-between;
   align-items: flex-start;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 400;
 }
 
