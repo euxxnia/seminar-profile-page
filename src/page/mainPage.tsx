@@ -6,7 +6,6 @@ import Contact from '../components/Contact.tsx';
 const MainPage: React.FC = () => {
   return (
     <div>
-      <div className="background"></div>
       <About />
       <Contact />
     </div>
