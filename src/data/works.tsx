@@ -41,6 +41,16 @@ export const works: Work[] = [
   },
   {
     id: 4,
+    title: 'TIMESPACE',
+    tags: ['UXUI', 'HCI'],
+    date: '2024',
+    keywords: ['with. NAVER Place / Map'],
+    image: '/Timespace.png',
+    content:
+      '네이버 플레이스 2030 온오프라인 경험 강화를 주제로, \n학업 공간 스케줄러 TIMESPACE 서비스를 기획&디자인하였다. \n\n(2024-2 서비스UX디자인 수업에서 진행한 산학 프로젝트입니다.)',
+  },
+  {
+    id: 5,
     title: 'Icebreaker',
     tags: ['UXUI'],
     date: '2024',
@@ -50,7 +60,7 @@ export const works: Work[] = [
       '해커톤에서 4명의 개발자와 함께 만든 아이스브레이킹 웹\nLLM 어쩌고',
   },
   {
-    id: 5,
+    id: 6,
     title: 'ADMIT ONE',
     tags: ['HCI', 'UXUI'],
     date: '2024',
@@ -59,7 +69,7 @@ export const works: Work[] = [
     content: 'Work 4 content...',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Cafe NIEVE',
     tags: ['Graphic'],
     date: '2024',
@@ -68,7 +78,7 @@ export const works: Work[] = [
     content: 'Work 5 content...',
   },
   {
-    id: 7,
+    id: 8,
     title: 'Emotion Tracker',
     tags: ['Graphic', 'Dev'],
     date: '2023',
@@ -77,7 +87,7 @@ export const works: Work[] = [
     content: 'Work 7 content...',
   },
   {
-    id: 8,
+    id: 9,
     title: 'Observing C Codes',
     tags: ['Graphic', 'Dev'],
     date: '2023',
@@ -86,7 +96,7 @@ export const works: Work[] = [
     content: 'Work 8 content...',
   },
   {
-    id: 9,
+    id: 10,
     title: 'Childrens Day',
     tags: ['Graphic', 'Dev'],
     date: '2023',
@@ -95,7 +105,7 @@ export const works: Work[] = [
     content: 'Work 8 content...',
   },
   {
-    id: 10,
+    id: 11,
     title: 'LIGHTBANK',
     tags: ['UXUI'],
     date: '2024',
